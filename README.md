@@ -18,3 +18,31 @@ template Birthday(){
 
 component main = Birthday();
 ```
+# Recompile and reproduce
+1. compile:
+```
+circom bday.circom --r1cs --wasm --sym --c
+```
+2. compute the witness:
+```
+cd ./bday_js
+node generate_witness.js bday.wasm ../input.json witness.wtns
+```
+3. Powersoftau
+```
+cd ./ptau
+snarkjs groth16 setup ../bday.r1cs powersOfTau28_hez_final_15.ptau bday_0000.zkey
+```
+### Contribute to the ceremony
+```
+snarkjs zkey contribute bday_0000.zkey bday_0001.zkey --name="1st Contributor Name" -v
+snarkjs zkey export verificationkey bday_0001.zkey verification_key.json
+```
+4. Generate a proof
+```
+snarkjs groth16 prove bday_0001.zkey ../bday_js/witness.wtns proof.json public.json
+```
+5. Verify the proof
+```
+snarkjs groth16 verify verification_key.json public.json proof.json
+```
