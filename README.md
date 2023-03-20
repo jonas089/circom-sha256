@@ -1,5 +1,8 @@
 # Prove a SHA256 Hash in Circom
 Prove a SHA256 hash computation in circom zk [learn more](https://docs.circom.io/background/background/)
+# Draft article
+[Latest 
+draft](https://medium.com/@jonas_casper/circom-for-developers-15c77bb1b7aa)
 # Prerequisites
 1. install [circom](https://docs.circom.io/getting-started/installation/)
 2. study the [circom getting started](https://docs.circom.io/getting-started/writing-circuits/)
