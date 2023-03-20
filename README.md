@@ -1,3 +1,5 @@
+# Prove a SHA256 Signature in Circom
+
 # Verify the proof
 ```bash
 cd ./ptau
