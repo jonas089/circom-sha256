@@ -1,4 +1,5 @@
-# Prove a SHA256 Signature in Circom
+# Prove a SHA256 Hash in Circom
+Prove a SHA256 hash computation in circom zk
 
 # Verify the proof
 ```bash
