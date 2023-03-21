@@ -416,15 +416,15 @@ NULL,
 NULL };
 uint get_main_input_signal_start() {return 257;}
 
-uint get_main_input_signal_no() {return 16;}
+uint get_main_input_signal_no() {return 6;}
 
-uint get_total_signal_no() {return 204553;}
+uint get_total_signal_no() {return 204533;}
 
 uint get_number_of_components() {return 1811;}
 
 uint get_size_of_input_hashmap() {return 256;}
 
-uint get_size_of_witness() {return 28658;}
+uint get_size_of_witness() {return 28648;}
 
 uint get_size_of_constants() {return 332;}
 
@@ -38119,7 +38119,7 @@ void Sha256_98_create(uint soffset,uint coffset,Circom_CalcWit* ctx,std::string 
 ctx->componentMemory[coffset].templateId = 98;
 ctx->componentMemory[coffset].templateName = "Sha256";
 ctx->componentMemory[coffset].signalStart = soffset;
-ctx->componentMemory[coffset].inputCounter = 16;
+ctx->componentMemory[coffset].inputCounter = 6;
 ctx->componentMemory[coffset].componentName = componentName;
 ctx->componentMemory[coffset].idFather = componentFather;
 ctx->componentMemory[coffset].subcomponents = new uint[9]{0};
@@ -38144,12 +38144,12 @@ uint index_multiple_eq;
 PFrElement aux_dest = &lvar[0];
 // load src
 // end load src
-Fr_copy(aux_dest,&circuitConstants[45]);
+Fr_copy(aux_dest,&circuitConstants[12]);
 }
 {
 uint aux_create = 0;
 int aux_cmp_num = 0+ctx_index+1;
-uint csoffset = mySignalStart+784;
+uint csoffset = mySignalStart+774;
 for (uint i = 0; i < 1; i++) {
 std::string new_cmp_name = "ha0";
 H_0_create(csoffset,aux_cmp_num,ctx,new_cmp_name,myId);
@@ -38161,7 +38161,7 @@ aux_cmp_num += 1;
 {
 uint aux_create = 1;
 int aux_cmp_num = 1+ctx_index+1;
-uint csoffset = mySignalStart+816;
+uint csoffset = mySignalStart+806;
 for (uint i = 0; i < 1; i++) {
 std::string new_cmp_name = "hb0";
 H_1_create(csoffset,aux_cmp_num,ctx,new_cmp_name,myId);
@@ -38173,7 +38173,7 @@ aux_cmp_num += 1;
 {
 uint aux_create = 2;
 int aux_cmp_num = 2+ctx_index+1;
-uint csoffset = mySignalStart+848;
+uint csoffset = mySignalStart+838;
 for (uint i = 0; i < 1; i++) {
 std::string new_cmp_name = "hc0";
 H_2_create(csoffset,aux_cmp_num,ctx,new_cmp_name,myId);
@@ -38185,7 +38185,7 @@ aux_cmp_num += 1;
 {
 uint aux_create = 3;
 int aux_cmp_num = 3+ctx_index+1;
-uint csoffset = mySignalStart+880;
+uint csoffset = mySignalStart+870;
 for (uint i = 0; i < 1; i++) {
 std::string new_cmp_name = "hd0";
 H_3_create(csoffset,aux_cmp_num,ctx,new_cmp_name,myId);
@@ -38197,7 +38197,7 @@ aux_cmp_num += 1;
 {
 uint aux_create = 4;
 int aux_cmp_num = 4+ctx_index+1;
-uint csoffset = mySignalStart+912;
+uint csoffset = mySignalStart+902;
 for (uint i = 0; i < 1; i++) {
 std::string new_cmp_name = "he0";
 H_4_create(csoffset,aux_cmp_num,ctx,new_cmp_name,myId);
@@ -38209,7 +38209,7 @@ aux_cmp_num += 1;
 {
 uint aux_create = 5;
 int aux_cmp_num = 5+ctx_index+1;
-uint csoffset = mySignalStart+944;
+uint csoffset = mySignalStart+934;
 for (uint i = 0; i < 1; i++) {
 std::string new_cmp_name = "hf0";
 H_5_create(csoffset,aux_cmp_num,ctx,new_cmp_name,myId);
@@ -38221,7 +38221,7 @@ aux_cmp_num += 1;
 {
 uint aux_create = 6;
 int aux_cmp_num = 6+ctx_index+1;
-uint csoffset = mySignalStart+976;
+uint csoffset = mySignalStart+966;
 for (uint i = 0; i < 1; i++) {
 std::string new_cmp_name = "hg0";
 H_6_create(csoffset,aux_cmp_num,ctx,new_cmp_name,myId);
@@ -38233,7 +38233,7 @@ aux_cmp_num += 1;
 {
 uint aux_create = 7;
 int aux_cmp_num = 7+ctx_index+1;
-uint csoffset = mySignalStart+1008;
+uint csoffset = mySignalStart+998;
 for (uint i = 0; i < 1; i++) {
 std::string new_cmp_name = "hh0";
 H_7_create(csoffset,aux_cmp_num,ctx,new_cmp_name,myId);
@@ -38245,7 +38245,7 @@ aux_cmp_num += 1;
 {
 uint aux_create = 8;
 int aux_cmp_num = 8+ctx_index+1;
-uint csoffset = mySignalStart+1040;
+uint csoffset = mySignalStart+1030;
 for (uint i = 0; i < 1; i++) {
 std::string new_cmp_name = "sha256compression";
 Sha256compression_97_create(csoffset,aux_cmp_num,ctx,new_cmp_name,myId);
@@ -38290,10 +38290,10 @@ PFrElement aux_dest = &lvar[2];
 // end load src
 Fr_copy(aux_dest,&circuitConstants[0]);
 }
-Fr_lt(&expaux[0],&lvar[2],&circuitConstants[45]); // line circom 20
+Fr_lt(&expaux[0],&lvar[2],&circuitConstants[12]); // line circom 20
 while(Fr_isTrue(&expaux[0])){
 {
-PFrElement aux_dest = &signalValues[mySignalStart + ((1 * Fr_toInt(&lvar[2])) + 272)];
+PFrElement aux_dest = &signalValues[mySignalStart + ((1 * Fr_toInt(&lvar[2])) + 262)];
 // load src
 // end load src
 Fr_copy(aux_dest,&signalValues[mySignalStart + ((1 * Fr_toInt(&lvar[2])) + 256)]);
@@ -38305,10 +38305,10 @@ Fr_add(&expaux[0],&lvar[2],&circuitConstants[2]); // line circom 20
 // end load src
 Fr_copy(aux_dest,&expaux[0]);
 }
-Fr_lt(&expaux[0],&lvar[2],&circuitConstants[45]); // line circom 20
+Fr_lt(&expaux[0],&lvar[2],&circuitConstants[12]); // line circom 20
 }
 {
-PFrElement aux_dest = &signalValues[mySignalStart + 288];
+PFrElement aux_dest = &signalValues[mySignalStart + 268];
 // load src
 // end load src
 Fr_copy(aux_dest,&circuitConstants[2]);
@@ -38317,12 +38317,12 @@ Fr_copy(aux_dest,&circuitConstants[2]);
 PFrElement aux_dest = &lvar[2];
 // load src
 // end load src
-Fr_copy(aux_dest,&circuitConstants[17]);
+Fr_copy(aux_dest,&circuitConstants[14]);
 }
 Fr_lt(&expaux[0],&lvar[2],&circuitConstants[149]); // line circom 25
 while(Fr_isTrue(&expaux[0])){
 {
-PFrElement aux_dest = &signalValues[mySignalStart + ((1 * Fr_toInt(&lvar[2])) + 272)];
+PFrElement aux_dest = &signalValues[mySignalStart + ((1 * Fr_toInt(&lvar[2])) + 262)];
 // load src
 // end load src
 Fr_copy(aux_dest,&circuitConstants[0]);
@@ -38347,9 +38347,9 @@ while(Fr_isTrue(&expaux[0])){
 Fr_sub(&expaux[1],&circuitConstants[150],&lvar[2]); // line circom 30
 Fr_sub(&expaux[0],&expaux[1],&circuitConstants[2]); // line circom 30
 {
-PFrElement aux_dest = &signalValues[mySignalStart + ((1 * Fr_toInt(&expaux[0])) + 272)];
+PFrElement aux_dest = &signalValues[mySignalStart + ((1 * Fr_toInt(&expaux[0])) + 262)];
 // load src
-Fr_shr(&expaux[1],&circuitConstants[45],&lvar[2]); // line circom 30
+Fr_shr(&expaux[1],&circuitConstants[12],&lvar[2]); // line circom 30
 Fr_band(&expaux[0],&expaux[1],&circuitConstants[2]); // line circom 30
 // end load src
 Fr_copy(aux_dest,&expaux[0]);
@@ -38514,7 +38514,7 @@ uint cmp_index_ref = 8;
 PFrElement aux_dest = &ctx->signalValues[ctx->componentMemory[mySubcomponents[cmp_index_ref]].signalStart + ((1 * Fr_toInt(&lvar[2])) + 512)];
 // load src
 // end load src
-Fr_copy(aux_dest,&signalValues[mySignalStart + ((1 * (0 + Fr_toInt(&lvar[2]))) + 272)]);
+Fr_copy(aux_dest,&signalValues[mySignalStart + ((1 * (0 + Fr_toInt(&lvar[2]))) + 262)]);
 }
 // run sub component if needed
 if(!(ctx->componentMemory[mySubcomponents[cmp_index_ref]].inputCounter -= 1)){
@@ -38572,7 +38572,7 @@ void Birthday_99_create(uint soffset,uint coffset,Circom_CalcWit* ctx,std::strin
 ctx->componentMemory[coffset].templateId = 99;
 ctx->componentMemory[coffset].templateName = "Birthday";
 ctx->componentMemory[coffset].signalStart = soffset;
-ctx->componentMemory[coffset].inputCounter = 16;
+ctx->componentMemory[coffset].inputCounter = 6;
 ctx->componentMemory[coffset].componentName = componentName;
 ctx->componentMemory[coffset].idFather = componentFather;
 ctx->componentMemory[coffset].subcomponents = new uint[1]{0};
@@ -38596,12 +38596,12 @@ uint index_multiple_eq;
 {
 uint aux_create = 0;
 int aux_cmp_num = 0+ctx_index+1;
-uint csoffset = mySignalStart+272;
+uint csoffset = mySignalStart+262;
 for (uint i = 0; i < 1; i++) {
 std::string new_cmp_name = "SHA";
 Sha256_98_create(csoffset,aux_cmp_num,ctx,new_cmp_name,myId);
 mySubcomponents[aux_create+i] = aux_cmp_num;
-csoffset += 204280 ;
+csoffset += 204270 ;
 aux_cmp_num += 1810;
 }
 }
@@ -38611,10 +38611,10 @@ uint cmp_index_ref = 0;
 PFrElement aux_dest = &ctx->signalValues[ctx->componentMemory[mySubcomponents[cmp_index_ref]].signalStart + 256];
 // load src
 // end load src
-Fr_copyn(aux_dest,&signalValues[mySignalStart + 256],16);
+Fr_copyn(aux_dest,&signalValues[mySignalStart + 256],6);
 }
 // need to run sub component
-assert(!(ctx->componentMemory[mySubcomponents[cmp_index_ref]].inputCounter -= 16));
+assert(!(ctx->componentMemory[mySubcomponents[cmp_index_ref]].inputCounter -= 6));
 Sha256_98_run(mySubcomponents[cmp_index_ref],ctx);
 }
 {
